@@ -48,7 +48,6 @@ with open('pending_follow_requests.json', 'r') as file:
     data = json.load(file)
 
 def open_links_in_batches(batch_size=20):
-    # Extract the links
     links = []
     for item in data['relationships_follow_requests_sent']:
         for string_data in item['string_list_data']:
