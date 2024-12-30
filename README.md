@@ -1,6 +1,6 @@
 # Instagram Mass Unfollower
 
-This repository automates the process of unfollowing users on Instagram using a **Tampermonkey userscript**. The script clicks the unfollow button on each user's profile and closes the tab once done. The session is managed using cookies, so you don't need to log in repeatedly.
+This repository automates the process of unfollowing users on Instagram using a **Tampermonkey userscript**. The script clicks the unfollow button on each user's profile and closes the tab once done.
 
 **Please note:** The Puppeteer-based script is unreliable and prone to errors, so we recommend using the Tampermonkey solution for a smoother experience.
 
@@ -70,16 +70,11 @@ open_links_in_batches()
    ```bash
    python open_links.py
    ```
-   This will open the links in batches of 20 (or another batch size if you modify the script). The script will wait for 2 seconds between batches to prevent overwhelming your browser.
+   This will open the links in batches of 20 (or another batch size if you modify the script).
 
 ### 5. Run the Tampermonkey Script
-- **Visit Instagram** in your browser.
-- The userscript will automatically click the unfollow button on each user’s profile and confirm the unfollow.
-- After all unfollows are completed, the tab will automatically close.
-
-### 6. Session Management
-The Tampermonkey userscript saves your session using cookies. Once logged in, the script will keep you logged in on future visits without requiring you to log in again.
-
+- Let the automation do the rest.
+  
 ## Why not use the Puppeteer script?
 
 While Puppeteer is a powerful browser automation tool, it can be quite unreliable for this type of task. One common issue is **frame detachment**, which occurs when Instagram dynamically updates the page. This can lead to errors, causing the script to fail or requiring a page reload. As a result, running the Puppeteer-based script often results in inconsistencies and errors, making it less suitable for long-term use. **We strongly recommend using the Tampermonkey userscript** for a more stable and seamless experience.
